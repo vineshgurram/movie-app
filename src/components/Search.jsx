@@ -5,7 +5,7 @@ const API_KEY = import.meta.env.VITE_MOVIE_API_KEY;
 
 
 export default function Search({setmovieData}) {
-  const [query, setQuery] = useState("minion");
+  const [query, setQuery] = useState("venom");
   useEffect(()=>{
     async function fetchMovieDetails(){
         const fetchResult = await fetch(`${URL}?s=${query}&apiKey=${API_KEY}`);
