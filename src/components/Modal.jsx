@@ -1,6 +1,6 @@
 import MovieDetail from "./MovieDetail";
 
-export default function Modal({ movieId, setModal }) {
+export default function Modal({ movieId, setModal, setLoading }) {
   const closeModal = function () {
     setModal(false);
   };
@@ -13,7 +13,7 @@ export default function Modal({ movieId, setModal }) {
         {/* <h3 className="title">
             Movie Information
         </h3> */}
-        <MovieDetail movieId={movieId} />
+        <MovieDetail movieId={movieId} setLoading={setLoading} />
       </div>
       <div className="overlay"></div>
     </>

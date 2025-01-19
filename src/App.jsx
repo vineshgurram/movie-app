@@ -12,6 +12,7 @@ function App() {
   const [movieData, setmovieData] = useState([]);
   const [movieId, setMovieId] = useState("");
   const [modal, setModal] = useState(false);
+const [loading, setLoading] = useState(false);
 
   // const openModal = function(){
   //   setModal(true);
@@ -34,7 +35,7 @@ function App() {
         </Section>
       </Main>
       {
-        modal && <Modal movieId={movieId} setModal={setModal} />
+        modal && <Modal setLoading={setLoading} loading={loading} movieId={movieId} setModal={setModal} />
       }
       
     </>
